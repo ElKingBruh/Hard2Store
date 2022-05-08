@@ -294,6 +294,17 @@ footer{
     margin: 10vh auto 0vh;
     border-radius: 2rem;
   }
+  
+  .contentProd{
+    width: 16rem;
+    height: 20rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms;
+    color: black;
+    margin: 0 0.5rem 1.8rem 0.4rem;
+  }
 
   /*footer*/
   footer{
