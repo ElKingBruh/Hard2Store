@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Image/isotipo.png" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>carrito</title>
+  </head>
+  <body onload="cargarDatos()">
+    <!--header-->
+    <header class="cabecera">
+      <div class="contentNav1">
+        <a href="index.html" class="logo">
+          <img
+            src="Image/logotipo.png"
+            alt="logotipo"
+            width="120"
+            class="logotipo"
+          />
+          <img
+            src="Image/isotipo.png"
+            alt="isotipo"
+            width="60"
+            class="isotipo"
+          />
+        </a>
+        <input type="search" placeholder="Buscar Producto" class="searchBar" />
+      </div>
+      <div class="contentNav2">
+        <nav class="navHead">
+          <a href="" class="navIcon">
+            <img
+              src="Image/ubicacion.png"
+              alt="ubicacion icono"
+              width="21"
+              class="navImage"
+            />
+          </a>
+          <a href="" class="navIcon">
+            <img
+              src="Image/envios.png"
+              alt="envios icono"
+              width="48"
+              class="navImage"
+            />
+          </a>
+          <a href="carrito.html" class="navIcon">
+            <img
+              src="Image/carrito.png"
+              alt="carrito de compra icono"
+              width="44"
+              class="navImage"
+            />
+          </a>
+        </nav>
+        <button id="regist" class="contentSession">
+          <b class="sessionIcon">Usuario</b>
+        </button>
+      </div>
+    </header>
+
+    <!-- formulario editar -->
+    <div
+      id="contenedor_modal"
+      class="contenedor_modal fixed top-0 left-0 flex items-center justify-center"
+    >
+      <section id="seccionFormulario" class="mt-12">
+        <div
+          class="flex flex-col justify-center items-center p-12 mt-24 bg-gray-400 mx-64 rounded-xl"
+        >
+          <h2 class="text-3xl font-bold mb-8">Editar compra</h2>
+          <form
+            action="#"
+            class="formulario flex justify-around flex-wrap m-2 items-center px-12 pt-6"
+          >
+            <!-- <div>
+              <input
+                type="text"
+                class="px-3 py-1 rounded-lg mb-6 bg-gray-200 border border-gray-500"
+                id="nombre"
+                placeholder="ingrese el nombre"
+              />
+            </div> -->
+            <div>
+              <input
+                type="number"
+                class="px-3 py-1 rounded-lg mb-6 bg-gray-200 border border-gray-500"
+                id="valor"
+                placeholder="Cantidad"
+              />
+            </div>
+            <div>
+              <textarea
+                class="px-3 py-1 rounded-lg mb-6 bg-gray-200 border border-gray-500"
+                id="ingredientes"
+                rows="3"
+                placeholder="Comentario"
+              ></textarea>
+            </div>
+            <div class="flex">
+              <input
+                type="button"
+                class="px-6 py-2 rounded-lg mr-4 cursor-pointer transition hover:bg-green-500 hover:scale-110 duration-300 hover:shadow-md"
+                id="btnGuardar"
+                value="Guardar"
+              />
+              <input
+                type="button"
+                class="px-6 py-2 rounded-lg ml-4 cursor-pointer transition hover:bg-red-500 hover:scale-110 duration-300 hover:shadow-md"
+                id="btnCancelar"
+                value="Cancelar"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- carrito -->
+    <section id="datos" class="datos mt-16 flex flex-col">
+      <h2 class="font-bold text-2xl pt-6">Carrito</h2>
+      <input
+        type="button"
+        class="btnAgregar py-2 rounded-xl my-6 cursor-pointer transition hover:bg-green-500 hover:scale-110 duration-300 hover:shadow-md"
+        id="btnAgregar"
+        value="Realizar compra"
+      />
+      <table class="table" id="tblDatos">
+        <thead>
+          <tr>
+            <th scope="col">ID del producto</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Comentario</th>
+            <th scope="col">cantidad</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody id="tbdDatos">
+        </tbody>
+      </table>
+    </section>
+
+    <!-- footer -->
+    <!-- <footer>
+      <p>diseño inicio - Proyecto final</p>
+      <p>Todos los derechos reservados</p>
+      <ul class="integrantes">
+        <li>Juan Delgado</li>
+        <li>Elkin Vasquez</li>
+      </ul>
+    </footer> -->
+
+    <!-- llamar archivo script -->
+    <script src="script/app.js"></script>
+  </body>
+</html>
